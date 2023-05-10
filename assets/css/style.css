@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
 }
@@ -25,6 +26,18 @@ a {
     max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
+}
+
+/* line clamp => gioi han chu  */
+.lineclamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.lineclamp.line-2 {
+    --line-clamp:2;
 }
 
 .header {
@@ -93,6 +106,11 @@ a {
 
 .btn {
     opacity: 0.9;
+}
+
+/* break all */
+.break-all {
+    word-break: break-all;
 }
 
 /* heading */
@@ -319,12 +337,95 @@ a {
     background: #FFFFFF;
     box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
+    border: 1px solid #e2dfda;
+}
+
+.popular .card-item:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    border-color: transparent;
 }
 
 .card .card-item .thumb {
     display: block;
-    width: 100%;
+    width: calc(100% + 2px);
+    margin: -1px;
     height: 278px;
     object-fit: cover;
     border-radius: 12px 12px 0px 0px;
+}
+
+.card .info {
+    padding: 16px 22px 22px;
+}
+
+.popular .card .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .card .title {
+    margin-right: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px; 
+    color: #171100;
+}
+
+.popular .card .rating {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #FEA31B;
+
+}
+
+.popular .rating .value {
+    margin-left: 6px;
+    font-size: 1.6rem;
+    line-height: 1.67;
+    color: #FEA31B;
+}
+
+.popular .info .desc {
+    margin-top: 6px;
+    font-size: 1.4rem;
+    line-height: 1.85;
+    color: #5F5B53;
+}
+
+.popular .info .foot {
+    margin: 18px 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .info .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.popular .info .book-btn{
+    border: none;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.popular .info .book-btn:hover {
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.feedback {
+    width: 100%;
+    height: 380px;
+    background-color: #171100;
 }
